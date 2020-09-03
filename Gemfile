@@ -1,0 +1,60 @@
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+# search gem -> https://www.ruby-toolbox.com/
+ruby '2.6.6'
+
+gem 'rails', '5.2.3'
+
+# DB
+gem 'mysql2'
+
+# front
+gem 'slim-rails'
+gem 'sass-rails'
+gem 'bootsnap', '>= 1.4.2', require: false
+
+# 認証
+gem 'devise'
+gem 'devise-i18n'
+# 管理画面
+gem 'activeadmin'
+# ページネート
+gem 'kaminari'
+gem 'ransack'
+# 画像アップロード
+gem 'refile'
+# PDF
+gem 'wicked_pdf'
+# Excel
+gem 'rubyXL'
+# コメント補助
+gem 'annotate'
+
+gem 'nokogiri', '~> 1.11.0.rc1'
+
+###########
+
+gem 'puma', '~> 4.1'
+gem 'turbolinks', '~> 5'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 2.7'
+# Use Active Model has_secure_password
+gem 'bcrypt', '~> 3.1.7'
+
+##########
+
+
+group :development, :test do
+  # メール（localhost:1080）
+  gem 'mailcatcher'
+  # エラー表示
+  gem 'better_errors'
+  gem 'ruby-debug-ide'
+  gem 'debase'
+  gem 'rubocop'
+  gem 'rubocop-rails'
+  gem 'html2slim'
+end
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
