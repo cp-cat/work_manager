@@ -17,6 +17,9 @@ Things you may want to cover:
 
 * How to run the test suite
 
+* Debug
+  bundle exec rdebug-ide --host 127.0.0.1 --port 1234 --dispatcher-port 26162 -- bin/rails s
+
 #初期構築
 ##1 gemファイル作成
 ```
