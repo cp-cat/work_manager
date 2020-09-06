@@ -1,0 +1,147 @@
+have_header: checking for vm_core.h... -------------------- no
+
+"x86_64-w64-mingw32-gcc -o conftest.exe -IE:/Ruby26-x64/include/ruby-2.6.0/x64-mingw32 -IE:/Ruby26-x64/include/ruby-2.6.0/ruby/backward -IE:/Ruby26-x64/include/ruby-2.6.0 -I. -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -LE:/Ruby26-x64/lib -L. -pipe -s -fstack-protector-strong     -lx64-msvcrt-ruby260  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return 0;
+8: }
+/* end */
+
+"x86_64-w64-mingw32-gcc -E -IE:/Ruby26-x64/include/ruby-2.6.0/x64-mingw32 -IE:/Ruby26-x64/include/ruby-2.6.0/ruby/backward -IE:/Ruby26-x64/include/ruby-2.6.0 -I. -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong  conftest.c -o conftest.i"
+conftest.c:5:10: fatal error: vm_core.h: No such file or directory
+    5 | #include <vm_core.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- no
+
+"x86_64-w64-mingw32-gcc -E -IE:/Ruby26-x64/include/ruby-2.6.0/x64-mingw32 -IE:/Ruby26-x64/include/ruby-2.6.0/ruby/backward -IE:/Ruby26-x64/include/ruby-2.6.0 -I. -IE:/Ruby26-x64/include/ruby-2.6.0/ruby-2.6.6-p146 -O3 -fno-fast-math -fstack-protector-strong  conftest.c -o conftest.i"
+conftest.c:5:10: fatal error: vm_core.h: No such file or directory
+    5 | #include <vm_core.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -E -IE:/Ruby26-x64/include/ruby-2.6.0/x64-mingw32 -IE:/Ruby26-x64/include/ruby-2.6.0/ruby/backward -IE:/Ruby26-x64/include/ruby-2.6.0 -I. -IC:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.10/lib/debase/ruby_core_source/ruby-2.6.5-p114 -O3 -fno-fast-math -fstack-protector-strong  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for iseq.h... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -E -IE:/Ruby26-x64/include/ruby-2.6.0/x64-mingw32 -IE:/Ruby26-x64/include/ruby-2.6.0/ruby/backward -IE:/Ruby26-x64/include/ruby-2.6.0 -I. -IC:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.10/lib/debase/ruby_core_source/ruby-2.6.5-p114 -O3 -fno-fast-math -fstack-protector-strong  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <iseq.h>
+/* end */
+
+--------------------
+
+have_header: checking for version.h... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -E -IE:/Ruby26-x64/include/ruby-2.6.0/x64-mingw32 -IE:/Ruby26-x64/include/ruby-2.6.0/ruby/backward -IE:/Ruby26-x64/include/ruby-2.6.0 -I. -IC:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.10/lib/debase/ruby_core_source/ruby-2.6.5-p114 -O3 -fno-fast-math -fstack-protector-strong  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <version.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -E -IE:/Ruby26-x64/include/ruby-2.6.0/x64-mingw32 -IE:/Ruby26-x64/include/ruby-2.6.0/ruby/backward -IE:/Ruby26-x64/include/ruby-2.6.0 -I. -IC:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.10/lib/debase/ruby_core_source/ruby-2.6.5-p114 -O3 -fno-fast-math -fstack-protector-strong  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_insnhelper.h... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -E -IE:/Ruby26-x64/include/ruby-2.6.0/x64-mingw32 -IE:/Ruby26-x64/include/ruby-2.6.0/ruby/backward -IE:/Ruby26-x64/include/ruby-2.6.0 -I. -IC:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.10/lib/debase/ruby_core_source/ruby-2.6.5-p114 -O3 -fno-fast-math -fstack-protector-strong  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <vm_insnhelper.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -E -IE:/Ruby26-x64/include/ruby-2.6.0/x64-mingw32 -IE:/Ruby26-x64/include/ruby-2.6.0/ruby/backward -IE:/Ruby26-x64/include/ruby-2.6.0 -I. -IC:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.10/lib/debase/ruby_core_source/ruby-2.6.5-p114 -O3 -fno-fast-math -fstack-protector-strong  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for method.h... -------------------- yes
+
+"x86_64-w64-mingw32-gcc -E -IE:/Ruby26-x64/include/ruby-2.6.0/x64-mingw32 -IE:/Ruby26-x64/include/ruby-2.6.0/ruby/backward -IE:/Ruby26-x64/include/ruby-2.6.0 -I. -IC:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/debase-ruby_core_source-0.10.10/lib/debase/ruby_core_source/ruby-2.6.5-p114 -O3 -fno-fast-math -fstack-protector-strong  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <method.h>
+/* end */
+
+--------------------
+

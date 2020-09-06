@@ -10,15 +10,15 @@ gem 'rails', '5.2.3'
 gem 'mysql2'
 
 # front
-gem 'slim-rails'
-gem 'sass-rails'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'sass-rails'
+gem 'slim-rails'
 
 # 認証
 gem 'devise'
 gem 'devise-i18n'
 # 管理画面
-gem 'activeadmin'
+# gem 'activeadmin'
 # ページネート
 gem 'kaminari'
 gem 'ransack'
@@ -31,7 +31,7 @@ gem 'rubyXL'
 # コメント補助
 gem 'annotate'
 
-gem 'nokogiri', '~> 1.11.0.rc1'
+gem 'nokogiri'#, '~> 1.11.0.rc1'
 
 ###########
 
@@ -44,17 +44,14 @@ gem 'bcrypt', '~> 3.1.7'
 
 ##########
 
-
 group :development, :test do
   # メール（localhost:1080）
   gem 'mailcatcher'
   # エラー表示
   gem 'better_errors'
-  gem 'ruby-debug-ide'
   gem 'debase'
-  gem 'rubocop'
-  gem 'rubocop-rails'
   gem 'html2slim'
+  gem 'ruby-debug-ide'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
