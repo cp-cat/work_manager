@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions' }
-
+  devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions', passwords: 'users/passwords' }
   devise_scope :user do
     get 'user/:id', to: 'users/registrations#detail'
     get 'sign_up', to: 'users/registrations#new'

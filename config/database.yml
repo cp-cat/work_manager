@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: hospital_search
+  database: work_manager
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: hospital_search
+  database: work_manager
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -48,6 +48,6 @@ test:
 #
 production:
   <<: *default
-  database: hospital_search
-  username: hospital_search
-  password: <%= ENV['HOSPITAL_SEARCH_DATABASE_PASSWORD'] %>
+  database: work_manager
+  username: work_manager
+  password: <%= ENV['work_manager_DATABASE_PASSWORD'] %>

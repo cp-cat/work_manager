@@ -1,4 +1,4 @@
-current directory: C:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/puma-4.3.6/ext/puma_http11
+current directory: C:/Users/igaguri/Desktop/development/twitter/work_manager/vendor/bundle/ruby/2.6.0/gems/puma-4.3.6/ext/puma_http11
 E:/Ruby26-x64/bin/ruby.exe -I E:/Ruby26-x64/lib/ruby/2.6.0 -r ./siteconf20200906-1412-1dgsrbj.rb extconf.rb
 checking for whether -D_FORTIFY_SOURCE=2 is accepted as CFLAGS... yes
 checking for whether -fstack-protector is accepted as LDFLAGS... yes
@@ -11,10 +11,10 @@ checking for TLS_server_method() in openssl/ssl.h... yes
 checking for SSL_CTX_set_min_proto_version in openssl/ssl.h... yes
 creating Makefile
 
-current directory: C:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/puma-4.3.6/ext/puma_http11
+current directory: C:/Users/igaguri/Desktop/development/twitter/work_manager/vendor/bundle/ruby/2.6.0/gems/puma-4.3.6/ext/puma_http11
 make "DESTDIR=" clean
 
-current directory: C:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/puma-4.3.6/ext/puma_http11
+current directory: C:/Users/igaguri/Desktop/development/twitter/work_manager/vendor/bundle/ruby/2.6.0/gems/puma-4.3.6/ext/puma_http11
 make "DESTDIR="
 generating puma_http11-x64-mingw32.def
 compiling http11_parser.c
@@ -23,6 +23,6 @@ compiling mini_ssl.c
 compiling puma_http11.c
 linking shared-object puma/puma_http11.so
 
-current directory: C:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/puma-4.3.6/ext/puma_http11
+current directory: C:/Users/igaguri/Desktop/development/twitter/work_manager/vendor/bundle/ruby/2.6.0/gems/puma-4.3.6/ext/puma_http11
 make "DESTDIR=" install
 /usr/bin/install -c -m 0755 puma_http11.so ./.gem.20200906-1412-131sjet/puma

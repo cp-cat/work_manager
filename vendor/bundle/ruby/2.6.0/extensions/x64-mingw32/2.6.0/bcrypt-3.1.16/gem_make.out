@@ -1,11 +1,11 @@
-current directory: C:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
+current directory: C:/Users/igaguri/Desktop/development/twitter/work_manager/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
 E:/Ruby26-x64/bin/ruby.exe -I E:/Ruby26-x64/lib/ruby/2.6.0 -r ./siteconf20200906-1412-wmoftn.rb extconf.rb
 creating Makefile
 
-current directory: C:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
+current directory: C:/Users/igaguri/Desktop/development/twitter/work_manager/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
 make "DESTDIR=" clean
 
-current directory: C:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
+current directory: C:/Users/igaguri/Desktop/development/twitter/work_manager/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
 make "DESTDIR="
 generating bcrypt_ext-x64-mingw32.def
 compiling bcrypt_ext.c
@@ -18,6 +18,6 @@ wrapper.c:182:60: warning: 'struct crypt_data' declared inside parameter list wi
       |                                                            ^~~~~~~~~~
 linking shared-object bcrypt_ext.so
 
-current directory: C:/Users/igaguri/Desktop/development/acchan/hospital_search/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
+current directory: C:/Users/igaguri/Desktop/development/twitter/work_manager/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
 make "DESTDIR=" install
 /usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20200906-1412-1x0aajq

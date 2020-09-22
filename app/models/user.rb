@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  validates :login_id, presence: true, length: { maximum: 128 }, uniqueness: true
+  validates :name, presence: true, length: { maximum: 50 }
+  validates :email, presence: true
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, authentication_keys: %i[login_id]
