@@ -1,0 +1,18 @@
+nav.navbar.navbar-expand-lg.navbar-light
+  = link_to "勤怠管理システム", "/homes", class: "navbar-brand"
+  button.navbar-toggler aria-controls="navbarNav" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarNav" data-toggle="collapse" type="button" 
+    span.navbar-toggler-icon
+  - if user_signed_in?
+  #navbarNav.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item
+        = link_to "打刻", "/stamps", class: "nav-link"
+      li.nav-item
+        = link_to "勤怠表", "#", class: "nav-link"
+      li.nav-item
+        = link_to "休日・休憩時間設定", "#", class: "nav-link"
+      li.nav-item
+        = link_to "設定", "#", class: "nav-link"
+    span.navbar-text
+      span.material-icons account_circle
+      span.user_name = @user&.name.presence || "ユーザ"

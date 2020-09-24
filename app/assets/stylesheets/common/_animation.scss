@@ -1,0 +1,43 @@
+// スライドイン・アウト
+@mixin slide-in($color, $opacity: 1, $time: 0.3s) {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: "";
+    background: linear-gradient(to right, $color);
+    opacity: $opacity;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform ease-in-out $time;
+  }
+  &:hover::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+}
+// スケール変更
+@mixin change-scale($scaleX: 1.1, $scaleY: 1.1) {
+  transition: transform 0.3s;
+  overflow: hidden;
+  transform: scale(1);
+  &:hover {
+    transform: scale($scaleX, $scaleY);
+  }
+}
+// フェードイン
+@mixin fade-in {
+  opacity: 0;
+  visibility: hidden;
+  transition: 1.5s;
+  transform: translateY(10%);
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}

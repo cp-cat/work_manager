@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     get 'login', to: 'users/sessions#new'
     get 'logout', to: 'users/sessions#destroy'
   end
-  root 'home#index'
-  resources :home
+  root 'homes#index'
+  resources :homes, :stamps
 end

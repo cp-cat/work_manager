@@ -8,11 +8,13 @@
 
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <%= render partial: "application/header" %>
+  <%= tag.p notice, class: notice if notice.present? %>
+  <%= tag.p alert, class: alert if alert.present? %>
   <%= yield %>
 </body>
 

@@ -13,6 +13,8 @@ gem 'mysql2'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'sass-rails'
 gem 'slim-rails'
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
 
 # 認証
 gem 'devise'

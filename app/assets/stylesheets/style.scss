@@ -1,0 +1,64 @@
+@import "common/reset";
+@import "bootstrap";
+@import "common/colors";
+@import "common/util";
+@import "common/animation";
+@import "common/override_vendor_propaty";
+
+// initialize
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-family: YuGothic, "Yu Gothic Medium", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 16px;
+  color: $black;
+  overflow-y: scroll;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  &:visited {
+    color: $black;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+img {
+  vertical-align: bottom;
+}
+%flex {
+  display: flex !important;
+}
+.display-sp {
+  display: none;
+}
+@include media-breakpoint-up(md) {
+  %flex {
+    display: block !important;
+  }
+  .content-left,
+  .content-center,
+  .content-right,
+  .content-outer {
+    width: 90%;
+  }
+  .display-pc {
+    display: none;
+  }
+  .display-sp {
+    display: block;
+  }
+}
+// header
+.user_name {
+  vertical-align: middle;
+}
+nav.navbar {
+  background-color: $orange-200;
+  box-shadow: 0 2px 5px $dark-text-disabled;
+  margin-bottom: 20px;
+}
+// footer
