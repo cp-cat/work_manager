@@ -3,3 +3,40 @@
   display: inline-flex;
   vertical-align: middle;
 }
+.nav-link {
+  & > .material-icons {
+    cursor: pointer;
+  }
+}
+// Bootstrapプロパティ上書き
+.container-login {
+  @extend .container-fluid;
+  max-width: 576px;
+  padding: 2rem;
+}
+.alert-notice {
+  @extend .alert-info;
+}
+.alert-alert {
+  @extend .alert-danger;
+}
+.btn-primary {
+  background-color: $blue-600;
+  border-color: $blue-600;
+  box-shadow: 0 2px 5px $dark-text-disabled;
+  &:hover {
+    box-shadow: none;
+    background-color: $blue-800;
+    border-color: $blue-800;
+  }
+}
+.btn-success {
+  background-color: $green-300;
+  border-color: $green-300;
+  box-shadow: 0 2px 5px $dark-text-disabled;
+  &:hover {
+    box-shadow: none;
+    background-color: $green-500;
+    border-color: $green-500;
+  }
+}

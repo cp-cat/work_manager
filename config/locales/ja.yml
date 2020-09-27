@@ -1,0 +1,11 @@
+ja:
+  com:
+    title:
+      index: "%{resource} 一覧"
+      new: "%{resource} 新規登録"
+      edit: "%{resource} 更新"
+    link:
+      top: "トップへ"
+      to: "%{to}へ"
+    error:
+      file_load_error: "%{file}が読み込めませんでした。"

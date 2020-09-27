@@ -15,7 +15,9 @@ gem 'sass-rails'
 gem 'slim-rails'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
-
+gem 'devise-bootstrap-views', '~> 1.0'
+#sprockets4 with a babel processor
+gem 'babel-transpiler'
 # 認証
 gem 'devise'
 gem 'devise-i18n'

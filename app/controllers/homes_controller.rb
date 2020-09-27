@@ -7,4 +7,7 @@ class HomesController < ApplicationController
   def get_user
     @user = current_user
   end
+  def load_head_file
+    @load_head_file, @file_load_error_message = [], []
+  end
 end

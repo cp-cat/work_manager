@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_06_152431) do
+ActiveRecord::Schema.define(version: 2020_09_26_001900) do
+
+  create_table "attendances", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "work_type_id"
+    t.date "work_date", null: false
+    t.string "start_time"
+    t.string "end_time"
+    t.string "break_time"
+    t.string "note"
+    t.index ["user_id"], name: "index_attendances_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "email", null: false

@@ -1,0 +1,12 @@
+/ ファイル読み込みエラーメッセージ
+- Array(@file_load_error_message).each do |message|
+  - if Rails.env.production?
+    - logger.warn t "com.error.file_load_error", file: message
+  - else
+    = tag.p t("com.error.file_load_error", file: message), class: %w(alert alert-danger) if message.present?
+
+/ deviseメッセージ
+.row
+  .container
+    = tag.p notice, class: %w(notice alert alert-info) if notice.present?
+    = tag.p alert, class: %w(alert alert-danger) if alert.present?

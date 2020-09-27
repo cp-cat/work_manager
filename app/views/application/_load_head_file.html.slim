@@ -1,0 +1,12 @@
+- Array(@load_head_file).each do |file|
+  - case file
+  - when /(.*)(\.js)$/
+    - if asset_exists?("javascripts", file)
+      = javascript_include_tag $1
+    - else
+      - @file_load_error_message << file
+  - when /(.*)(\.css|\.scss)$/
+    - if asset_exists?("stylesheets", "#{$1}.css") || asset_exists?("stylesheets", "#{$1}.scss")
+      = stylesheet_link_tag $1
+    - else
+      - @file_load_error_message << file
