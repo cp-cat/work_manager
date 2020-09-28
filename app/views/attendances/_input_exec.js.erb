@@ -1,0 +1,5 @@
+<%= render partial: "ajax_message", locals: {response: response} %>
+<% if @attendance = response[:data]&.decorate.presence %>
+    $("#stamped-start-time").html("<%= @attendance.start_time %>")
+    $("#stamped-end-time").html("<%= @attendance.end_time %>")
+<% end %>

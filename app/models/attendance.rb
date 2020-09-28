@@ -6,8 +6,8 @@ class Attendance < ApplicationRecord
   validates :note, length: { maximum: 255 }
 
   # 勤務時間を登録・更新
-  def self.create_data(params)
-    result = { status: false, messages: [] }
+  def self.input_exec(params)
+    result = { status: false, messages: [], data: nil }
     work_types = WorkType.list
     # 当日分の情報を取得
     if today_data = self.today_data(params[:user_id]).presence
@@ -21,6 +21,7 @@ class Attendance < ApplicationRecord
         result[:status] = today_data.save
         if result[:status]
           result[:messages] << I18n.t('successes.messages.taikin', time: today_data.end_time.strftime(I18n.t('time.formats.short')))
+          result[:data] = today_data
         else
           result[:messages] << today_data.errors.messages unless result[:status]
         end
@@ -32,6 +33,7 @@ class Attendance < ApplicationRecord
         result[:status] = new_data.save
         if result[:status]
           result[:messages] << I18n.t('successes.messages.shukkin', time: new_data.start_time.strftime(I18n.t('time.formats.short')))
+          result[:data] = new_data
         else
           result[:messages] << new_data.errors.messages unless result[:status]
         end

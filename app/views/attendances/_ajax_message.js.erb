@@ -1,0 +1,5 @@
+<% classNames = response[:status] ? "alert alert-info" : "alert alert-danger" %>
+<% Array(response[:messages]).each do |message| %>
+$("#ajax-response-message").removeClass().addClass("<%= classNames %>")
+$("#ajax-response-message").html("<%= message %>")
+<% end %>

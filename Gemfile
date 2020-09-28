@@ -21,7 +21,7 @@ gem 'devise-bootstrap-views', '~> 1.0'
 #sprockets4 with a babel processor
 gem 'babel-transpiler'
 #デコレーター
-gem 'active_decorator'
+gem 'draper'
 
 # API用
 gem 'active_model_serializers'

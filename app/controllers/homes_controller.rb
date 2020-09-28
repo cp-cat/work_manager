@@ -1,4 +1,5 @@
 class HomesController < ApplicationController
+  # include AjaxResponse
   before_action :authenticate_user!
   before_action :get_user, except: :error
 

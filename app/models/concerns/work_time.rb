@@ -40,7 +40,7 @@ module WorkTime
 
   # int(秒) -> string(時間:分:秒)
   def sec2time(sec)
-    Time.at(sec).utc.strftime('%X')
+    Time.at(sec.abs).utc.strftime('%X')
   end
 
   # 日付を降順（新しい順）にソート(同じ型ならdate,datetime,timeなんでもいい)

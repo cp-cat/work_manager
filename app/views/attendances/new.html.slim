@@ -2,16 +2,19 @@
   .col-sm-12.text-center#current-time-area
     #current-date = current_date
     #current-time
-  .btn-area.col-sm-12.text-center.row
-    .col-sm-12.col-md.mb-2.text-center
-      = form_with  model: @attendance, id: "for_ajax" do |f|
-        = f.hidden_field(:work_date, value: Date.today)
-        = f.hidden_field(:start_time)
-        = f.hidden_field(:work_type_cd, value: "shukkin")
-        = f.submit "出勤", class: "btn btn-primary", id: "shukkin"
-    .col-sm-12.col-md.mb-2.text-center
-      = form_with  model: @attendance, class: "for_ajax" do |f|
-        = f.hidden_field(:work_date, value: Date.today)
-        = f.hidden_field(:end_time)
-        = f.hidden_field(:work_type_cd, value: "shukkin")
-        = f.submit "退勤", class: "btn btn-danger", id: "taikin"
+  .btn-area.col-sm-12.text-center
+    .row
+      .col-sm-12.col-md.mb-2.text-center
+        = form_with  model: @attendance do |f|
+          = f.hidden_field(:work_date, value: Date.today)
+          = f.hidden_field(:start_time)
+          = f.hidden_field(:work_type_cd, value: "shukkin")
+          = f.submit "出勤", class: "btn btn-primary", id: "shukkin"
+        = tag.div @attendance.start_time, id: "stamped-start-time"
+      .col-sm-12.col-md.mb-2.text-center
+        = form_with  model: @attendance do |f|
+          = f.hidden_field(:work_date, value: Date.today)
+          = f.hidden_field(:end_time)
+          = f.hidden_field(:work_type_cd, value: "shukkin")
+          = f.submit "退勤", class: "btn btn-danger", id: "taikin"
+        = tag.div @attendance.end_time, id: "stamped-end-time"
