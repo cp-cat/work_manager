@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     get 'logout', to: 'users/sessions#destroy'
   end
   root 'homes#index'
-  resources :homes, :stamps
+  resources :homes, :attendances
 end

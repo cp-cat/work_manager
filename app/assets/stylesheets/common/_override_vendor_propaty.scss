@@ -40,3 +40,13 @@
     border-color: $green-500;
   }
 }
+.btn-danger {
+  background-color: $red-400;
+  border-color: $red-400;
+  box-shadow: 0 2px 5px $dark-text-disabled;
+  &:hover {
+    box-shadow: none;
+    background-color: $red-700;
+    border-color: $red-700;
+  }
+}

@@ -8,6 +8,8 @@ gem 'rails', '5.2.3'
 
 # DB
 gem 'mysql2'
+# bulk insert
+gem 'activerecord-import'
 
 # front
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -18,6 +20,13 @@ gem 'jquery-rails'
 gem 'devise-bootstrap-views', '~> 1.0'
 #sprockets4 with a babel processor
 gem 'babel-transpiler'
+#デコレーター
+gem 'active_decorator'
+
+# API用
+gem 'active_model_serializers'
+# 画像用
+# gem 'carrierwave', '~> 2.0'
 # 認証
 gem 'devise'
 gem 'devise-i18n'

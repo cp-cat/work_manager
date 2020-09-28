@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_26_001900) do
+ActiveRecord::Schema.define(version: 2020_09_27_001555) do
 
   create_table "attendances", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "work_type_id"
+    t.string "work_type_cd", limit: 16
     t.date "work_date", null: false
-    t.string "start_time"
-    t.string "end_time"
-    t.string "break_time"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "break_time"
     t.string "note"
     t.index ["user_id"], name: "index_attendances_on_user_id"
   end
@@ -36,6 +36,11 @@ ActiveRecord::Schema.define(version: 2020_09_26_001900) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["login_id"], name: "index_users_on_login_id", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "work_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "cd", limit: 16, null: false
+    t.string "name", null: false
   end
 
 end

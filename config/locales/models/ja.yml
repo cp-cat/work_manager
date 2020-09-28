@@ -27,5 +27,13 @@ ja:
         unconfirmed_email: 未確認Eメール
         unlock_token: ロック解除用トークン
         updated_at: 更新日
+      attendance:
+        user_id: ユーザID
+        work_type_cd: 勤怠種別CD
+        work_date: 出勤日
+        start_time: 出勤時間
+        end_time: 退勤時間
+        break_time: 休憩時間
+        note: 理由
     models:
       user: ユーザ
