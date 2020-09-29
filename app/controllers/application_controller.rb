@@ -1,4 +1,8 @@
 class ApplicationController < ActionController::Base
+  include AjaxResponse
+  before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :authenticate_user!
+
   # 例外処理
   class DuplicateError < StandardError; end
 
@@ -8,12 +12,12 @@ class ApplicationController < ActionController::Base
     rescue_from StandardError, with: :render_500
     rescue_from Exception, with: :render_500
   end
-  before_action :configure_permitted_parameters, if: :devise_controller?
 
+  # 404エラー
   def render_404
     render template: 'errors/error_404', status: 404, layout: 'application', content_type: 'text/html'
   end
-
+  # 500エラー
   def render_500
     render template: 'errors/error_500', status: 500, layout: 'application', content_type: 'text/html'
   end
@@ -36,5 +40,9 @@ class ApplicationController < ActionController::Base
   # ログアウト後リダイレクト先
   def after_sign_out_path_for(resource)
     login_path
+  end
+  # headタグ内ファイル読み込み
+  def load_head_file
+    @load_head_file, @file_load_error_message = [], []
   end
 end

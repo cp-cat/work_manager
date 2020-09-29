@@ -1,5 +1,4 @@
-class AttendancesController < HomesController
-  # include AjaxResponse
+class AttendancesController < ApplicationController
   before_action :load_head_file
   def index
     # @attendance = Attendance.all

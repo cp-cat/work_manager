@@ -16,7 +16,7 @@ nav.navbar.navbar-expand-lg.navbar-light
       ul.navbar-nav
         li.nav-item.nav-link
           span.material-icons account_circle
-          = link_to @user.name, "/user/#{@user.id}", class: "user_name"
+          = link_to current_user.name, "/user/#{current_user.id}", class: "user_name"
       ul.navbar-nav
         li.nav-item
           = link_to "ログアウト", "/logout", class: %w(btn btn-light text-secondary)
