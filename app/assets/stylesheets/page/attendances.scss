@@ -1,3 +1,5 @@
+@import "../common/colors";
+
 #current-time-area {
   margin: 50px auto;
 }
@@ -5,15 +7,17 @@
   font-size: 1.5rem;
 }
 #current-time {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+}
+#current-timeS {
+  margin-left: 0.4em;
+  font-size: 0.6em;
+  color: $dark-text-secondary;
 }
 #shukkin,
 #taikin {
   width: 80%;
-  padding: 2rem 0;
-  font-size: 24px;
-  border-radius: 50px;
-}
-#stamped-start-time,
-#stamped-end-time {
+  padding: 1.5rem 0;
+  font-size: 2.5em;
+  border-radius: 100px;
 }

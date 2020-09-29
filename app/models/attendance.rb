@@ -3,6 +3,7 @@ class Attendance < ApplicationRecord
   extend WorkTime
 
   validates :user_id, :work_type_cd, :work_date, presence: true
+  validates :break_time, length: { maximum: 2 }
   validates :note, length: { maximum: 255 }
 
   # 勤務時間を登録・更新
@@ -13,8 +14,10 @@ class Attendance < ApplicationRecord
     if today_data = self.today_data(params[:user_id]).presence
       # 更新
       if params[:start_time].present?
+        # 出勤済み
         result[:messages] << I18n.t('errors.messages.already', name: work_types['shukkin'])
       else
+        # 退勤する
         today_data.end_time = params[:end_time]
         today_data.break_time = self.calc_break_time(today_data.start_time, today_data.end_time)
         today_data.note = params[:note] #.presence || today_data.note
@@ -29,6 +32,7 @@ class Attendance < ApplicationRecord
     else
       # 登録
       if params[:start_time].present?
+        # 出勤する
         new_data = self.new(params)
         result[:status] = new_data.save
         if result[:status]

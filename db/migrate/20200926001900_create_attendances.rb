@@ -6,7 +6,7 @@ class CreateAttendances < ActiveRecord::Migration[5.2]
       t.date :work_date, null: false
       t.datetime :start_time
       t.datetime :end_time
-      t.datetime :break_time
+      t.integer :break_time
       t.string :note, limit: 255
     end
 

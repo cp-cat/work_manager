@@ -4,7 +4,7 @@ class AttendancesController < ApplicationController
     # @attendance = Attendance.all
   end
   def new
-    @attendance = Attendance.today_data(current_user.id)&.decorate.presence || Attendance.decorate
+    @attendance = Attendance.today_data(current_user.id)&.decorate.presence || Attendance.new.decorate
   end
 
   def create

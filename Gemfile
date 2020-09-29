@@ -18,6 +18,7 @@ gem 'slim-rails'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'devise-bootstrap-views', '~> 1.0'
+gem 'font-awesome-sass', '~> 5.4.1'
 #sprockets4 with a babel processor
 gem 'babel-transpiler'
 #デコレーター
